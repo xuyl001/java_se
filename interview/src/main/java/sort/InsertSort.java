@@ -2,7 +2,9 @@ package sort;
 
 /**
  * Created by conglin.liu on 2017/5/31.
- * 直接插入排序
+ * 直接插入排序:
+ * 将数据插入到已经排好序的序列中
+ * 第一次插入时 : 当序列只有一个数时,认为是有序的
  */
 public class InsertSort {
     static  int[] array={49,38,65,52,13,25,45,62,20};
