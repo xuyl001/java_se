@@ -2,6 +2,9 @@ package sort;
 
 /**
  * Created by conglin.liu on 2017/5/31.
+ * 快速排序 :
+ * 先将整个待排元素序列分割成若干个子序列, 分别进行直接插入排序，然后依次缩减增量再进行排序
+ * 待整个序列中的元素基本有序（增量足够小）时，再对全体元素进行一次直接插入排序
  */
 public class QuickSort {
     static  int[] array = {21,34,12,18,56,10};//要排序的数组
@@ -9,7 +12,6 @@ public class QuickSort {
     public static void main(String[] args) {
         quickSort(0, array.length-1);
 
-        System.err.println("快排后的结果:");
         for (int i = 0; i <array.length ; i++) {
             System.out.println(array[i]);
         }
@@ -23,8 +25,9 @@ public class QuickSort {
             int partition = partition(low, high, array[low]);//分段
             quickSort(low,partition-1);//对低分段排序
             quickSort(partition+1,high);//对高分段排序
+        }
     }
-    }
+
     /**
      * 以pivot为基准对数组进行划分 , 比pivot小的元素在低位段，比pivot大的元素在高位段
      * @param low 　默认0
@@ -53,5 +56,6 @@ public class QuickSort {
         array[low] = array[high];
         array[high] = temp;
     }
+
 
 }
