@@ -7,10 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="interview" />
+        <module name="Java-SE" />
+        <module name="java-se" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="interview" target="1.8" />
+      <module name="Java-SE" target="1.7" />
+      <module name="java-se" target="1.8" />
+      <module name="springboot-springData" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

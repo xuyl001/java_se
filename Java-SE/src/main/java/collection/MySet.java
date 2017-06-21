@@ -1,6 +1,5 @@
 package collection;
 
-import sun.misc.Sort;
 
 
 public class MySet {
