@@ -108,12 +108,22 @@ public class StringTest {
 			System.out.println(string); 
 		}
 	}
-	
+
+	/**
+	 * format : http://blog.csdn.net/lonely_fireworks/article/details/7962171
+	 */
+	@Test
+	public void test08() {
+		String  s1 = "{0}/bcdch";
+		System.out.println(String.format("1", s1));
+
+	}
+
 	/**
 	 * 其他
 	 */
 	@Test
-	public void test08() {
+	public void test09() {
 		String  s1 = "abcdch";
 		
 		System.out.println(s1.isEmpty());
