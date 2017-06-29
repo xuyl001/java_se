@@ -120,10 +120,21 @@ public class StringTest {
 	}
 
 	/**
-	 * 其他
+	 * concat:合并
 	 */
 	@Test
 	public void test09() {
+		String  s1 = "2";
+		String s2 = "1";
+		System.out.println(s1.concat(s2));
+
+	}
+
+	/**
+	 * 其他
+	 */
+	@Test
+	public void test10() {
 		String  s1 = "abcdch";
 		
 		System.out.println(s1.isEmpty());
