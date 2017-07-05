@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="interview" />
         <module name="Java-SE" />
-        <module name="java-se" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

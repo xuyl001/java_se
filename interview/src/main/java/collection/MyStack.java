@@ -1,4 +1,4 @@
-package util.collection;
+package collection;
 
 
 public class MyStack {
