@@ -1,13 +1,16 @@
-package dataStructure.singleLink;
+package dataStructure.link;
 
 /**
+ *
  * Created by conglin.liu on 2017/7/13.
  */
 public class Link {
+    protected  int age;
     protected String name;
     public Link next;
 
-    public Link(String name, Link next) {
+    public Link(int age, String name, Link next) {
+        this.age = age;
         this.name = name;
         this.next = next;
     }
@@ -28,10 +31,12 @@ public class Link {
         return next;
     }
 
+
     @Override
     public String toString() {
         return "Link{" +
-                "name='" + name + '\'' +
+                "age=" + age +
+                ", name='" + name + '\'' +
                 ", next=" + next +
                 '}';
     }

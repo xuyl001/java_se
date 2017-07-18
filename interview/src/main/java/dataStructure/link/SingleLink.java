@@ -1,12 +1,13 @@
-package dataStructure.singleLink;
+package dataStructure.link;
 
 /**
+ * 单链表
  * Created by conglin.liu on 2017/7/13.
  */
-public class LinkList {
+public class SingleLink {
     protected   Link first;
 
-    public LinkList() {
+    public SingleLink() {
         first = null;
     }
 
@@ -54,20 +55,20 @@ public class LinkList {
     }
 
     public static void main(String[] args) {
-        LinkList linkList = new LinkList();
+        SingleLink linkList = new SingleLink();
         testInsert(linkList);
         linkList.find("firs");
 
     }
 
     public static void testRemove() {
-        LinkList linkList = new LinkList();
-        Link link = new Link("first", null);
+        SingleLink linkList = new SingleLink();
+        Link link = new Link(1,"first", null);
         linkList.remove(link);
     }
 
-    public static void testInsert(LinkList linkList) {
-        Link link = new Link("first", null);
+    public static void testInsert(SingleLink linkList) {
+        Link link = new Link(2,"first", null);
         linkList.insert(link);
 //        System.out.println(link);
     }
