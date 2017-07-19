@@ -8,11 +8,24 @@ public class Link {
     protected  int age;
     protected String name;
     public Link next;
+    public Link pre;
+
+    public Link(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
 
     public Link(int age, String name, Link next) {
         this.age = age;
         this.name = name;
         this.next = next;
+    }
+
+    public Link(int age, String name, Link next, Link pre) {
+        this.age = age;
+        this.name = name;
+        this.next = next;
+        this.pre = pre;
     }
 
     public void setName(String name) {
