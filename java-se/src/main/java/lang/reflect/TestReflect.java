@@ -9,7 +9,7 @@ import org.junit.Test;
 public class TestReflect {
 
 	/**
-	 * 获得Class 对象
+	 * 获得类对象
 	 */
 	@Test
 	public void test1() throws Exception {

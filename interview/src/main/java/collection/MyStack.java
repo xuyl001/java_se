@@ -1,4 +1,4 @@
-package dataStructure;
+package collection;
 
 
 public class MyStack {

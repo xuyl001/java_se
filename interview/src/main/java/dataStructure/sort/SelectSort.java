@@ -1,4 +1,4 @@
-package sort;
+package dataStructure.sort;
 
 /**
  *选择排序 

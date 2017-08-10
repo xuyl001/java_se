@@ -1,4 +1,4 @@
-package sort;
+package dataStructure.sort;
 
 /**
  * Created by conglin.liu on 2017/5/31.
