@@ -1,4 +1,4 @@
-package lang.annotation;
+package basic.annotation;
 
 import java.util.List;
 

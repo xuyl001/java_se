@@ -1,4 +1,4 @@
-package lang.annotation;
+package basic.annotation;
 
 /**
  * 实体类

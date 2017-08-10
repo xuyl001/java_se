@@ -1,6 +1,4 @@
-package basic.enumTest;
-
-import basic.enumTest.TestEnum.Size;
+package basic;
 
 /**
  * 枚举的定义和使用
@@ -52,9 +50,9 @@ public class TestEnum {
 }
 
 class TestSwith{
-	private Size size;  
+	private TestEnum.Size size;
     
-    public TestSwith(Size size)  {  
+    public TestSwith(TestEnum.Size size)  {
         this.size = size;  
     }  
     
