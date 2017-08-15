@@ -211,22 +211,22 @@ public class BinaryTree {
        }
     }
 
-
       //中序遍历
       public void iterativeInOrder(Node pNode) {
-          Stack<Node> stack = new Stack<>();
-          if(pNode == null)
-              return ;
+         Stack<Node> stack = new Stack<>();
+         if(pNode == null) {
+            return;
+         }
 
-          while(!stack.isEmpty()|| pNode != null){
-              while(pNode!=null){  //找到左叶节点
-                  stack.push(pNode);
-                  pNode = pNode.leftChild;
-              }
-              pNode = stack.pop();
-              System.out.println(pNode.age);
-              pNode = pNode.rightChild;
-          }
+         while (!stack.isEmpty() || pNode !=null) {
+            while (pNode!=null) { //找到左字树的叶子节点
+                stack.push(pNode);
+                pNode = pNode.leftChild;
+            }
+            pNode = stack.pop();
+             System.out.println(pNode.age);
+             pNode = pNode.rightChild;
+         }
       }
 
       //后续遍历 : 双栈法
@@ -241,7 +241,7 @@ public class BinaryTree {
           while(!stack1.isEmpty()) {
               node = stack1.pop();
               stack2.push(node);
-              if(node.rightChild!= null){
+              if(node.rightChild != null){
                   stack1.push(node.rightChild);
               }
               if(node.leftChild != null) {
@@ -276,8 +276,8 @@ public class BinaryTree {
 //            tree.inorder(n1);
 //            tree.postorder(n1);
 
-        tree.iterativePreorder(n1);
+//        tree.iterativePreorder(n1);
 //        tree.iterativeInOrder(n1);
-//        tree.iterativePostOrder(n1);
+        tree.iterativePostOrder(n1);
     }
 }
