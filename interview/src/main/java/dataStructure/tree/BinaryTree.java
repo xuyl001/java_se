@@ -195,32 +195,31 @@ public class BinaryTree {
 
     /** 非递归实现前序遍历 */
     public  void iterativePreorder(Node p) {
-        Stack<Node> stack = new Stack<Node>();
-        if (p != null) {
-            stack.push(p);
-            while (!stack.empty()) {
+       Stack<Node> stack = new Stack<>();
+       if(p != null ) {
+           stack.push(p);
+           while(!stack.isEmpty()) {
                 p = stack.pop();
-                System.out.println(p.age);
-                if (p.rightChild != null)
-                    stack.push(p.rightChild);
-                if (p.leftChild != null)  //为什么p.getLeft() 在后，getRight()在前应为while 循环第一句就是pop visit所以要把left放上，先访问。之中方法是即压即访问法。
-                    stack.push(p.leftChild);
-            }
-        }
+               System.out.println(p.age);
+               if(p.rightChild != null) {
+                   stack.push(p.rightChild);
+               }
+               if(p.leftChild != null) {
+                   stack.push(p.leftChild);
+               }
+           }
+       }
     }
 
 
       //中序遍历
-      public int iterativeInOrder(Node pNode)
-      {
+      public void iterativeInOrder(Node pNode) {
           Stack<Node> stack = new Stack<>();
           if(pNode == null)
-              return 0;
+              return ;
 
-          while(!stack.isEmpty()||pNode != null)
-          {
-              while(pNode!=null)
-              {
+          while(!stack.isEmpty()|| pNode != null){
+              while(pNode!=null){  //找到左叶节点
                   stack.push(pNode);
                   pNode = pNode.leftChild;
               }
@@ -228,37 +227,32 @@ public class BinaryTree {
               System.out.println(pNode.age);
               pNode = pNode.rightChild;
           }
-          return 1;
       }
 
-      //后续遍历
-      public void iterativePostOrder(Node node)
-      {
+      //后续遍历 : 双栈法
+      public void iterativePostOrder(Node node) {
           if(node == null)
               return ;
           Stack<Node> stack1 = new Stack<>();
           Stack<Node> stack2 = new Stack<>();//辅助栈
-          //存入根节点，初始化
           stack1.push(node);
+
           //stack1弹出的元素，压入stack2，在将该元素的左右节点压入stack1
-          while(!stack1.isEmpty())
-          {
+          while(!stack1.isEmpty()) {
               node = stack1.pop();
               stack2.push(node);
-              if(node.leftChild != null)
-              {
-                  stack1.push(node.leftChild);
-              }
-              if(node.rightChild != null)
-              {
+              if(node.rightChild!= null){
                   stack1.push(node.rightChild);
+              }
+              if(node.leftChild != null) {
+                  stack1.push(node.leftChild);
               }
           }
 
-          //stack弹出的即是后序遍历的顺序
-          while(!stack2.isEmpty())
-          {
-              System.out.println(stack2.pop().age);
+          //stack2弹出的即是后序遍历的顺序
+          while(!stack2.isEmpty()) {
+              node = stack2.pop();
+              System.out.println(node.age);
           }
       }
 
@@ -282,8 +276,8 @@ public class BinaryTree {
 //            tree.inorder(n1);
 //            tree.postorder(n1);
 
-//        tree.iterativePreorder(n1);
+        tree.iterativePreorder(n1);
 //        tree.iterativeInOrder(n1);
-        tree.iterativePostOrder(n1);
+//        tree.iterativePostOrder(n1);
     }
 }
